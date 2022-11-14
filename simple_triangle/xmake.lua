@@ -11,10 +11,8 @@ add_repositories("xswitch-repo https://github.com/HelloEngine/xswitch-repo.git m
 add_requires("devkit-a64", "libnx", "switch-glad")
 
 target("simple_triangle")
-    set_toolchains("aarch64-none-elf@devkit-a64")
-    set_kind("binary")
     add_packages("libnx", "switch-glad")
-    add_rules("@libnx/switch")
+    add_rules("@libnx/switch.binary")
 
     add_files("source/main.cpp")
 
